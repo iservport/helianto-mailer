@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "helianto-mailer",
     mainClass in Compile := Some("org.helianto.mailer.Application"),
-    version := "1.1.0.RELEASE",
+    version := "1.1.1.RELEASE",
     libraryDependencies ++= Seq(
       "org.scala-lang.modules" %% "scala-xml"              % "1.0.4",
       "org.helianto"            % "helianto-core"          % "0.7.0.11-BUILD",
@@ -36,7 +36,7 @@ lazy val root = (project in file("."))
     packageName in Docker := "mvps-156214/helianto-mailer",
     dockerBaseImage := "anapsix/alpine-java:latest",
     dockerUpdateLatest := true,
-    dockerExposedPorts := Seq(8180),
+    dockerExposedPorts := Seq(8082),
     dockerRepository := Some("us.gcr.io")
   )
 
